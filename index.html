@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+    <head>     
+        <title>Volley di testa v1.0</title> 
+        <meta charset="utf-8">
+    </head>   
+    <body style="background-image:url(./sprites/wood.jpg); background-repeat:repeat; color:#fff; font-family:Verdana; font-size: 11px;" 
+        onLoad="init();">   
+        <center> 
+            <div>         
+                <p> 
+                    <b style="font-size: 16px;"> Volley di testa v1.0 </b> 
+                </p>         
+                <button onClick="riparti(3);">Computer vs Computer</button>         
+                <button onClick ="riparti(2);">Player1 vs Computer</button>         
+                <button onClick ="riparti(0);">Player1 vs Player2</button>           
+                <button onClick ="riparti(1);">Computer vs Player2</button>         
+                Difficoltà: <button onClick="diff(2);">Facile</button>         
+                <button onClick="diff(4)">Medio</button>         
+                <button onClick="diff(5)">Difficile</button> 
+            </div>             
+            <div id="playScreen"> 
+                <canvas width="1000" height="540" id="canvasvolley" 
+                    style="background-image:url(./sprites/spiaggia.jpg); background-position:bottom; border: 2px #742 outset;"> 
+                    <p style="font-size: 22px;"> Il tuo browser non supporta HTML5 </p> 
+                </canvas>                     
+            </div> 
+            
+            <table style="width: 900px; font-size: 13px;"> 
+                <tr> 
+                    <td align="left"> 
+                        <b>A</b>: sinistra <b>D</b>: destra <b>W</b>: salta 
+                    </td> 
+                    <td align="center"> 
+                        <b> P </b>: pausa/riparti </td> 
+                    <td align="right"> 
+                        <b> < </b>: sinistra <b> > </b>: destra <b> ^ </b>: salta 
+                    </td> 
+                </tr> 
+            </table>             
+        </center> 
+        <script type ="text/javascript" src ="js/player/player.js" > </script> 
+        <script type ="text/javascript" src ="js/input/input.js" > </script> 
+        <script type ="text/javascript" src ="js/player/rete.js" > </script> 
+        <script type ="text/javascript" src ="js/player/ball.js" > </script> 
+        <script type ="text/javascript" src ="js/game.js" > </script> 
+        <script type ="text/javascript" src ="js/player/score.js" > </script> 
+        <script type ="text/javascript" src ="js/player/costumes.js" > </script> 
+        <script type ="text/javascript" src ="js/schermate/schermate.js" > </script> 
+
+        <script type ="text/javascript" src ="js/main.js" > </script> 
+
+    </body> 
+</html>
+
+
