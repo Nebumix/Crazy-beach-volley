@@ -8,7 +8,9 @@ var game = {            
     computer : 1, // 0: nessuno   1: left   2: right   3: entrambi computer 
     diff : 2, // difficoltà computer        valori  2 4 5   
     start: false,
-    schermata : 0
+    schermata : 0,
+    costum_left : 1,
+    costum_right: 2
 }            
 
 function resetGame() {             
@@ -39,3 +41,15 @@ function riparti(conf) {            
 function diff(val) {             
     game.diff = val;       
 }        
+
+function set_costum_left(num) {             
+    game.costum_left = num;       
+}      
+
+function set_costum_right(num) {             
+    game.costum_right = num;       
+}      
+
+function set_schermata(num) {             
+    game.schermata = num;       
+}      

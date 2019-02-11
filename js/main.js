@@ -47,9 +47,18 @@ buttonVS.src = "./sprites/buttons_versus1.png";
 var buttonDiff = new Image();
 buttonDiff.src = "./sprites/difficulty_button.png";
 
+var buttonLeftPlayers = new Image();
+buttonLeftPlayers.src = "./sprites/button_left_player.png";
+var buttonRightPlayers = new Image();
+buttonRightPlayers.src = "./sprites/button_right_player.png";
+var buttonPlay = new Image();
+buttonPlay.src = "./sprites/play_button.png";
 
 var cursor = new Image();
 cursor.src = "./sprites/cursor.png";
+
+var backgroundMenu = new Image();
+backgroundMenu.src = "./sprites/background_menu.jpg";
 
 
 var Key = {             
@@ -109,12 +118,8 @@ function init(){
     //se esiste il canvas, se non esiste il canvas, canvas è uguale a null
     if (canvas.getContext) {                         
 
-
-
-
-        set_player1(2);
-        set_player2(2);
-
+        set_player1(game.costum_left);
+        set_player2(game.costum_right);
 
         contesto = canvas.getContext("2d");    
         canvasWidth = canvas.width;                           

@@ -37,6 +37,32 @@ function checkClick (ev) {
         return diff(4);
     
     if(checkPaintButtonDiff(700, 806, 450, 450+50, 0, 50*2, 106, 50, 700, 450, 106, 50, 109, 6))
-    return diff(5);
+        return diff(5);
 
+    if(checkPaintButtonLeftPlayer(50, 150, 50, 150, 0, 0, 144, 144, 50, 50, 100, 100, 158, "button_zucca_left")){
+        set_costum_left(2);    
+        set_player1(game.costum_left);
+        return 0;
+    }
+        
+    if(checkPaintButtonLeftPlayer(180, 280, 50, 150, 0, 144, 144, 144, 180, 50, 100, 100, 158, "button_ninja_left")){
+        set_costum_left(1);   
+        set_player1(game.costum_left);
+        return 0;
+    }
+        
+    if(checkPaintButtonRightPlayer(canvas.width/2 + 50, canvas.width/2 + 150, 50, 150, 0, 0, 144, 144, canvas.width/2 + 50, 50, 100, 100, 158, "button_zucca_right")){
+        set_costum_right(2);    
+        set_player2(game.costum_right);
+        return 0;
+    }
+        
+    if(checkPaintButtonRightPlayer(canvas.width/2 + 180, canvas.width/2 + 280, 50, 150, 0, 144, 144, 144, canvas.width/2 + 180, 50, 100, 100, 158, "button_ninja_right")){
+        set_costum_right(1);
+        set_player2(game.costum_right);
+        return 0;
+    }
+
+    if(checkPlayButton((canvas.width/2) - (163/2), (canvas.width/2) - (163/2) + 163 , canvas.height/2 + 20, canvas.height/2 + 20 + 80))
+        return set_schermata(1);
 }
