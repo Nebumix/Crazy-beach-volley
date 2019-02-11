@@ -39,7 +39,13 @@ var buttonNinja = new Image();    
 buttonNinja.src = "./sprites/button_ninja.png"; 
 
 var buttonZucca = new Image();
-buttonZucca.src = "./sprites/button_zucca.png"; 
+buttonZucca.src = "./sprites/button_zucca.png";
+
+var buttonVS = new Image();
+buttonVS.src = "./sprites/buttons_versus1.png";
+
+var cursor = new Image();
+cursor.src = "./sprites/cursor.png";
 
 
 var Key = {             
@@ -134,7 +140,10 @@ function init(){
         
         window.addEventListener('keydown', function(event) {                             
             Key.onKeydown(event); 
-        }, false);                             
+        }, false);           
+        
+        canvas.addEventListener('mousemove', muoviMouse, false);                  
+        canvas.addEventListener('click', checkClick, false);                  
 
         //setInterval(gameLoop, intervallo);      
         gameLoop();
