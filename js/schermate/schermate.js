@@ -53,10 +53,14 @@ function screenMenu(){
     //     contesto.drawImage(buttonVS, 0, 82 * 3, 167, 83, 460, 380, 101, 50);
     // }
 
-    checkPaintButton(100, 201, 380, 380+50, 0, 0, 167, 83, 100, 380, 101, 50, 180, 0);
-    checkPaintButton(220, 321, 380, 380+50, 0, 83, 167, 83, 220, 380, 101, 50, 180, 1);
-    checkPaintButton(340, 441, 380, 380+50, 0, 82*2, 167, 83, 340, 380, 101, 50, 180, 2);
-    checkPaintButton(460, 561, 380, 380+50, 0, 82*3, 167, 83, 460, 380, 101, 50, 180, 3);
+    checkPaintButton(100, 201, 380, 380+50, 0, 0, 167, 83, 100, 380, 101, 50, 178, 0);
+    checkPaintButton(220, 321, 380, 380+50, 0, 83, 167, 83, 220, 380, 101, 50, 178, 1);
+    checkPaintButton(340, 441, 380, 380+50, 0, 82*2, 167, 83, 340, 380, 101, 50, 178, 2);
+    checkPaintButton(460, 561, 380, 380+50, 0, 82*3, 167, 83, 460, 380, 101, 50, 178, 3);
+
+    checkPaintButtonDiff(460, 566, 450, 450+50, 0, 0, 106, 50, 460, 450, 106, 50, 109, 4);
+    checkPaintButtonDiff(580, 686, 450, 450+50, 0, 50, 106, 50, 580, 450, 106, 50, 109, 5);
+    checkPaintButtonDiff(700, 806, 450, 450+50, 0, 50*2, 106, 50, 700, 450, 106, 50, 109, 6);
 
     contesto.drawImage(cursor, mouse.x, mouse.y);
 }
@@ -89,4 +93,32 @@ function checkPaintButton(limXStart, limXEnd, limYStart, limYEnd, ax, ay, bx, by
     }else{
         contesto.drawImage(buttonVS, ax, ay, bx, by, cx, cy, dx, dy);
     }
+}
+
+function checkPaintButtonDiff(limXStart, limXEnd, limYStart, limYEnd, ax, ay, bx, by, cx, cy, dx, dy, ax2, type){
+
+    //contesto.drawImage(buttonDiff, ax, ay, bx, by, cx, cy, dx, dy);
+
+    if(type == 4 && game.diff == 2){
+        contesto.drawImage(buttonDiff, ax2 + 106, ay, bx, by, cx, cy, dx, dy);
+        return 0;
+    }
+
+    if(type == 5 && game.diff == 4){
+        contesto.drawImage(buttonDiff, ax2 + 106, ay, bx, by, cx, cy, dx, dy);
+        return 0;
+    }
+
+    if(type == 6 && game.diff == 5){
+        contesto.drawImage(buttonDiff, ax2 + 106, ay, bx, by, cx, cy, dx, dy);
+        return 0;
+    }
+
+    if(mouse.x > limXStart && mouse.x < limXEnd && mouse.y > limYStart && mouse.y < limYEnd){
+        contesto.drawImage(buttonDiff, ax2, ay, bx, by, cx, cy, dx, dy);
+        return 1;
+    }else{
+        contesto.drawImage(buttonDiff, ax, ay, bx, by, cx, cy, dx, dy);
+    }
+
 }

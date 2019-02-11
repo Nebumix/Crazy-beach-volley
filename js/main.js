@@ -44,6 +44,10 @@ buttonZucca.src = "./sprites/button_zucca.png";
 var buttonVS = new Image();
 buttonVS.src = "./sprites/buttons_versus1.png";
 
+var buttonDiff = new Image();
+buttonDiff.src = "./sprites/difficulty_button.png";
+
+
 var cursor = new Image();
 cursor.src = "./sprites/cursor.png";
 

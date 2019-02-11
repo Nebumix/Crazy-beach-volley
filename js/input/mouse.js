@@ -30,4 +30,13 @@ function checkClick (ev) {
     if(checkPaintButton(460, 561, 380, 380+50, 0, 82*3, 167, 83, 460, 380, 101, 50, 180, 3))
         return riparti(3);
 
+    if(checkPaintButtonDiff(460, 566, 450, 450+50, 0, 0, 106, 50, 460, 450, 106, 50, 109, 4))
+        return diff(2);
+
+    if(checkPaintButtonDiff(580, 686, 450, 450+50, 0, 50, 106, 50, 580, 450, 106, 50, 109, 5))
+        return diff(4);
+    
+    if(checkPaintButtonDiff(700, 806, 450, 450+50, 0, 50*2, 106, 50, 700, 450, 106, 50, 109, 6))
+    return diff(5);
+
 }
