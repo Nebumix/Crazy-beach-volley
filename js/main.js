@@ -106,7 +106,7 @@ function gameLoop() {   
         // myBall.sxOld = myBall.sx;                           
         // myBall.syOld = myBall.sy;   
                                
-        acquisizioneInput();                           
+        acquisizioneInput();    //se c'è il menu i blocchi di logica non devono funzionare                       
         dinamicaGiocatori();                           
         dinamicaPalla();                           
         disegnaScena();             

@@ -28,13 +28,13 @@ function dinamicaPalla() {            
         
         if (myBall.sx < (canvasWidth / 2) - 20) {                                       
             game.puntiPlayer2++;                                         
-            // myBall.sx = (canvasWidth / 2) + 150;  
-            myBall.sx = Math.floor(Math.random() * (canvasWidth / 2) + 1);  
+            myBall.sx = (canvasWidth / 2) + 150;  
+            // myBall.sx = Math.floor(Math.random() * (canvasWidth / 2) + 1);  
                                      
         } else {                                         
             game.puntiPlayer1++;                                         
-            // myBall.sx = (canvasWidth / 2) - 150;
-            myBall.sx = Math.floor(Math.random() * canvasWidth - (canvasWidth / 2) + (canvasWidth / 2)); 
+            myBall.sx = (canvasWidth / 2) - 150;
+            // myBall.sx = Math.floor(Math.random() * canvasWidth - (canvasWidth / 2) + (canvasWidth / 2)); 
         }                           
         // playSound( win);                                   
     }                                                     
