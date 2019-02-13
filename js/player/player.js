@@ -15,15 +15,15 @@ function drawPlayer() {        
         if(Number.isInteger(this.pos))
             startxa = this.pos * current_player1.run;     
 
-            if(this.sy < canvasHeight - current_player1.height){
-                contesto.drawImage(sprite1_jump, current_player1.jump * this.jump, 0, current_player1.jump, current_player1.height, this.sx, this.sy, current_player1.jump, current_player1.height);
+        if(this.sy < canvasHeight - current_player1.height){
+            contesto.drawImage(sprite1_jump, current_player1.jump * this.jump, 0, current_player1.jump, current_player1.height, this.sx, this.sy, current_player1.jump, current_player1.height);
+        }else{
+            if(this.rest == 1){
+                contesto.drawImage(sprite1, startxa, 0, current_player1.run, current_player1.height, this.sx, this.sy, current_player1.run, current_player1.height);
             }else{
-                if(this.rest == 1){
-                    contesto.drawImage(sprite1, startxa, 0, current_player1.run, current_player1.height, this.sx, this.sy, current_player1.run, current_player1.height);
-                }else{
-                    contesto.drawImage(sprite1_rest, this.sx, this.sy, current_player1.idle, current_player1.height);
-                }
+                contesto.drawImage(sprite1_rest, this.sx, this.sy, current_player1.idle, current_player1.height);
             }
+        }
 
             // contesto.drawImage(sprite1, startxa, 0, 79, 100, this.sx, this.sy, 79, 100);
 
@@ -43,7 +43,7 @@ function drawPlayer() {        
             this.pos = 0;
         }
         if (this.pos < 0){
-            this.pos = current_player1.run_frame - 1;    
+            this.pos = current_player2.run_frame - 1;    
         }         
 
         if(Number.isInteger(this.pos)){

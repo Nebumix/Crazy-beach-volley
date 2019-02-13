@@ -22,7 +22,7 @@ function acquisizioneInput() {      
         myLeftPlayer.rest = 0;
     }        
     
-    if (Key.isDown(Key.LEFT) &&     (( game.computer == 1) || (game.computer == 3))    ) {                           
+    if (Key.isDown(Key.LEFT) && (( game.computer != 1) || (game.computer != 3)) ) {                           
         if (myRightPlayer.sx > (canvasWidth / 2)) {
             myRightPlayer.sx -= 8;   
             myRightPlayer.pos += 0.5;   
@@ -30,7 +30,7 @@ function acquisizioneInput() {      
         }             
     }           
     
-    if (Key.isDown(Key.RIGHT)) {                           
+    if (Key.isDown(Key.RIGHT) && (( game.computer != 1) || (game.computer != 3))) {                           
         if (myRightPlayer.sx < canvasWidth - 74) {
             myRightPlayer.sx += 8; 
             myRightPlayer.pos -= 0.5;  
